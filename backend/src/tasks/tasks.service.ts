@@ -4,7 +4,8 @@ import { UpdateTaskDto } from './dto/update-task.dto';
 
 @Injectable()
 export class TasksService {
-  private tasks = [];
+  private tasks: any[] = [];
+
 
   create(projectId: string, dto: CreateTaskDto) {
     const task = { id: Date.now().toString(), projectId, ...dto };

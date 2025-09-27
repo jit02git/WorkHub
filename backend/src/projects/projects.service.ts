@@ -4,7 +4,8 @@ import { UpdateProjectDto } from './dto/update-project.dto';
 
 @Injectable()
 export class ProjectsService {
-  private projects = [];
+  private projects: any[] = [];
+
 
   create(dto: CreateProjectDto) {
     const project = { id: Date.now().toString(), ...dto };

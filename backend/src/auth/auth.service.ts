@@ -5,7 +5,8 @@ import * as jwt from 'jsonwebtoken';
 
 @Injectable()
 export class AuthService {
-  private users = []; // replace with MongoDB User model
+    
+  private users: any[] = [];
 
   async register(dto: any) {
     const hashed = await bcrypt.hash(dto.password, 10);
