@@ -1,11 +1,10 @@
-// auth/auth.service.ts
 import { Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 
 @Injectable()
 export class AuthService {
-    
+
   private users: any[] = [];
 
   async register(dto: any) {
